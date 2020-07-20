@@ -1,0 +1,174 @@
+
+<html>
+
+<head>
+
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <script src="https://kit.fontawesome.com/f1aa401174.js" crossorigin="anonymous"></script> <!--fontawsome-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!--google material icons-->
+     <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}" type="text/css" charset = "utf-8" />
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" /> <!--iconic cdn-->
+     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"> <!--使用猫云iconic cdn，但仍旧不稳定，需要更改-->
+</head>
+
+<body>
+
+    <!-- 导航栏 -->
+    
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark "> 
+
+      <a class="navbar-brand" > <!--vz图标-->
+        <img src="{{url_for('static',filename='images/brandicon.png')}}" width="40" height="25" alt="" loading="lazy">
+      </a>
+      <a class="navbar-brand" > <!--自由科学民主图标-->
+        <img src="{{url_for('static',filename='images/title.png')}}" width="120" height="25" alt="" loading="lazy">
+      </a>
+      <!--汉堡菜单-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none; outline: none;"> <!--style移除边界以及outline-->
+        <span class="oi oi-align-right"></span> <!--iconic cdn不稳定，时常图标无法加载-->
+      </button>
+      <!--头部导航-->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav active ">
+          <li class="nav-item ">
+            <a class="nav-link " href="/">主页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  " href="#">归档</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/about">关于</a>
+          </li>
+         
+          
+        </ul>
+      </div>
+
+    </nav>
+
+
+    <!--头部背景-->
+    <header >
+      <div class="myheader text-dark text-center py-5 mt-5 ">  <!--预留上下高度让固定的头部导航不会覆盖到头部背景 原py-3 mt-0-->
+        <h1 class="display-3 mb-3" style=" color:white; font-size: xx-large;">豆奶泡菜的博客</h1> <!--font size 还需要调整-->
+        <p class="lead" style="color:azure;">-这个世界会好的</p>
+      </div>
+    </header>
+
+
+
+    <!--博客主体-->
+    {% block main %}
+    <main>
+
+      <!--test main (with sidebar)-->
+      <section class="py5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3 ">
+
+
+              <div class="row mt-2 mx-2">
+                <div class=" col-md-12  col-12 main-section text-center">
+                      <div class="row">
+                          <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
+                      </div>
+                      <div class="row user-detail">
+                          <div class="col-lg-12 col-sm-12 col-12">
+                              <img src="{{url_for('static',filename='images/webBack/IMG_4047.JPG')}}" class="rounded-circle img-thumbnail">
+                              <h5>朱浩鹏(Vincent)</h5>
+                              <p style="color: white; font-size: large;">英国约克大学(University of York) 计算机本科在读，爱编程，爱摇滚...</p>
+            
+                              <hr>
+                              
+                              
+                              
+                              <p><i class="fas fa-music"></i> 天上人间 - 王菲</p>
+                              <audio src="{{url_for('static',filename='music/天上人间.mp3')}}" controls style="background-color: transparent;"></audio>
+                              <hr>
+                              <span></span>
+                          </div>
+                      </div>
+                      <div class="row user-social-detail " >
+                          <div class="col-lg-12 col-sm-12  col-12" >
+                              <a href="https://github.com/vince1313" class=""><i class="fab fa-github-square" style="font-size: 30px; color: black;"></i></a>
+                              <a href="https://weibo.com/6058329518/profile?topnav=1&wvr=6&is_all=1" class=""><i class="fab fa-weibo" style="font-size: 30px; color: #F98B07 ;" ></i></a>
+                             
+                              <a href="https://www.facebook.com/people/%E6%9C%B1%E6%B5%A9%E9%B9%8F/100025913206312" class=""><i class="fab fa-facebook" style="font-size: 30px; color:#0176FA ;"></i></a>
+                          </div>
+                      </div>
+                </div>
+              </div>
+              
+        
+
+            </div>
+
+            <div class="col-md-6 mb-2">
+
+              <ul class="list-group list-group-flush " > <!--list-group-flush 去除border-->
+                <li class="list-group-item bg-transparent" style="border: none;" > <!--bg-transparent 背景变透明-->
+                  <div class="jumbotron mb-1">
+                    <h1 class="display-3" style="font-size: large;">哪些 Python 库让你相见恨晚？</h1>
+                    <p class="lead">This is a simple hero unit</p>
+                    <hr class="my-4">
+                    <p>It uses utility classes for typography </p>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </p>
+                  </div>
+                </li>
+    
+                <li class="list-group-item bg-transparent" style="border: none;"  >
+                  <div class="jumbotron mb-1">
+                    <h1 class="display-3" style="font-size: large;">Hello, world!</h1>
+                    <p class="lead">This is a simple hero unit, .</p>
+                    <hr class="my-4">
+                    <p>It uses utility classes for .</p>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </p>
+                  </div>
+                </li>
+
+                <li class="list-group-item bg-transparent"  style="border: none;" >
+                  <div class="jumbotron mb-1">
+                    <h1 class="display-3" style="font-size: large;">Hello, world!</h1>
+                    <p class="lead">This is a simple hero unit, .</p>
+                    <hr class="my-4">
+                    <p>It uses utility classes for .</p>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+            
+            <div class="col-md-3">
+                <!--预留以后想得到的内容-->
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+    </main>
+
+    {% endblock %}
+
+
+    
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script> <!--使用国内猫云的cdn ，若将网站挂在国外服务器，需将cdn切换至国外-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>

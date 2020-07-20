@@ -1,0 +1,73 @@
+@font-face{
+    font-family:'bahun';
+    src:url('fonts/bahun.eot');/* IE9 Compat Modes 暂时只支持英文字体*/
+    src:url('fonts/bahun.eot?#iefix')format('embedded-opentype'),/* IE6-IE8  暂时只支持英文*/
+    url('fonts/bahun.woff')format('woff'),/* Modern Browsers */
+    url('fonts/bahun.ttf')format('truetype'),/* Safari, Android, iOS */
+    url('fonts/bahun.svg#bahun')format('svg');/* Legacy iOS */
+}
+
+h1,p,h2,h3,h5{
+    font-family:"bahun";
+}
+
+a.nav-link{
+    font-family:"bahun";
+    font-size: large;
+}
+
+
+.myheader{
+    background: url('images/backpurple.png') ;
+    background-size: cover;
+
+}
+
+.embed-responsive .card-img-top {  /* this css enables zoom instead of image stretching */
+    object-fit: cover;
+}
+
+
+body {
+    background-image: url("images/webBack/IMG_4036.JPG");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+    
+
+
+
+.main-section{
+	border:none;
+	background-color:transparent;
+}
+.profile-header{
+	background-color:transparent;
+	height:70px;
+}
+.user-detail{
+	margin:-50px 0px 30px 0px;
+}
+.user-detail img{
+	height:100px;
+	width:100px;
+}
+.user-detail h5{
+	margin:15px 0px 5px 0px;
+}
+.user-social-detail{
+    
+	padding:15px 0px;
+	background-color: transparent;
+}
+.user-social-detail a i{
+	color:#fff;
+	font-size:23px;
+	padding: 0px 5px;
+}
